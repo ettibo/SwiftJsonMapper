@@ -1,0 +1,181 @@
+{
+  "tabbarSetting" : {
+    "backgroundImage": "background",
+    "shadowImage": "tabbar_shadow",
+    "normalItem": {
+      "textColor": "#BFBFC3",
+      "iconColor": "#BFBFC3",
+      "highlightTextColor": "#4992E5",
+      "highlightIconColor": "#4992E5"
+    },
+    "floatingItem": {
+      "bordorColor": "#4992E5",
+      "bordorWidth": 0.0,
+      "cornerRadius": 25,
+      "topInset": -22,
+      "overlayColor": "#FFFFFF",
+      "highlightTextColor": "#4992E5"
+    }
+  },
+  "tabbarItemSetup" : [
+   {
+     "identifier": "home",
+     "title": "tab_bar_button_home",
+     "normalImage": "home",
+     "selectedImage": "home_1",
+     "storyboard": "Main",
+     "storyboardIdentifier": "dashboard",
+     "bundle": "org.cocoapods.DigitalTravelPlatform"
+   },
+   {
+     "identifier": "around_me",
+     "title": "tab_bar_button_assistance",
+     "normalImage": "aroundme",
+     "selectedImage": "aroundme",
+     "storyboard": "AroundMeStoryboard",
+     "storyboardIdentifier": "assistance",
+     "bundle": "org.cocoapods.DigitalTravelAroundMe"
+   },
+   {
+     "identifier": "emergencyButton",
+     "title":"tab_bar_button_contact_us",
+     "normalImage": "btn-round-blue",
+     "selectedImage": "btn-round-blue",
+     "isFloating": true,
+     "hiJack": true,
+     "storyboard": "CustomerService",
+     "storyboardIdentifier": "CustomerServiceController",
+     "bundle": "org.cocoapods.DigitalTravelContactMode",
+     "tabController": "DigitalTravelUS.OverlayController"
+   },
+   {
+     "identifier": "country_information",
+     "title": "tab_bar_button_country_info",
+     "normalImage": "countryinfomation",
+     "selectedImage": "countryinfomation",
+     "bundle": "org.cocoapods.DigitalTravelCountryInformation",
+     "storyboard": "CountryInformation",
+     "storyboardIdentifier": "MainNavigation",
+     "tabController": "DigitalTravelCountryInformation.CountryInformationHijack"
+   },
+   {
+     "identifier": "others",
+     "title": "tab_bar_button_others",
+     "normalImage": "other",
+     "selectedImage": "other",
+     "storyboard": "Main",
+     "storyboardIdentifier": "DynamicContent",
+     "bundle": "org.cocoapods.DigitalTravelPlatform",
+     "tabController": "DigitalTravelPlatform.MenuTabHijack"
+   }
+  ],
+  "dashboard": {
+      	"background": "32-newyork",
+        "header": {
+            "name": "CountryWidget",
+            "identifier": "CountryWidgetViewController",
+            "bundle": "org.cocoapods.DigitalTravelCountryInformation"
+        },
+        "widgets": [
+        	{
+        		"name": "FlightWidget",
+        		"identifier": "flightWidget",
+            "bundle": "org.cocoapods.DigitalTravelMyTrips"
+        	},
+        	{
+        		"name": "Widget",
+        		"identifier": "policy",
+            "bundle": "org.cocoapods.DigitalTravelPolicy"
+        	}
+        ],
+      "footer": {
+        "name": "GeolocationWidget",
+        "identifier": "GeolocationWidgetViewController",
+        "bundle": "org.cocoapods.DigitalTravelCountryInformation"
+      }
+    },
+  "header": {
+    "name": "MenuUserProfile",
+    "bundle": "org.cocoapods.DigitalTravelProfile"
+  },
+  "footer": {
+    "name": "Main",
+    "identifier": "VersionViewController",
+    "bundle": "org.cocoapods.DigitalTravelPlatform"
+  },
+  "menu": [
+    {
+      "identifier": "claims",
+      "name": "draw_over_menu_claims",
+      "leftIconImage": "menu_claims",
+      "rightIconImage": "",
+      "type": 0,
+      "navigation": {
+        "name": "Policy",
+        "identifier": "ClaimEntranceViewController"
+      }
+    },
+    {
+      "identifier": "policies",
+      "name": "draw_over_menu_policies",
+      "leftIconImage": "menu_policies",
+      "rightIconImage": "",
+      "type": 0,
+      "navigation": {
+        "name": "Policy",
+        "identifier": "PolicyEntranceViewController"
+      }
+    },
+    {
+      "identifier": "medical_translator",
+      "name": "draw_over_menu_translator",
+      "leftIconImage": "menu_medical",
+      "rightIconImage": "",
+      "type": 0,
+      "navigation": {
+        "name": "MedicalTranslator",
+        "bundle": "org.cocoapods.DigitalTravelMedicalTranslator"
+      }
+    },
+    {
+      "identifier": "my_trips",
+      "name": "draw_over_menu_my_trip",
+      "leftIconImage": "menu_trip",
+      "rightIconImage": "",
+      "type": 0,
+      "navigation": {
+        "name": "MyTrips",
+        "bundle": "org.cocoapods.DigitalTravelMyTrips"
+      }
+    },
+    {
+      "identifier": "terms_of_use",
+      "name": "draw_over_menu_term_of_use",
+      "type": 1,
+      "navigation": {
+        "name": "WebViews",
+        "identifier": "termsWithNav",
+        "bundle": "org.cocoapods.DigitalTravelPlatform"
+      }
+    },
+    {
+      "identifier": "privacy_policy",
+      "name": "draw_over_menu_privacy_policy",
+      "type": 1,
+      "navigation": {
+        "name": "WebViews",
+        "identifier": "privacyPolicyWithNav",
+        "bundle": "org.cocoapods.DigitalTravelPlatform"
+      }
+    },
+    {
+      "identifier": "faq",
+      "name": "draw_over_menu_faq",
+      "type": 1,
+      "navigation": {
+        "name": "WebView",
+        "identifier": "faqWithNav"
+      }
+    }
+  ]
+}
